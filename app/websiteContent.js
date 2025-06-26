@@ -45,37 +45,37 @@ export const websiteContent = {
 		items: [
 			{
 				icon: "Clock",
-				title: "Save 40+ Hours Weekly",
+				title: "Save 20–40 Hours/Week",
 				description:
-					"Stop doing repetitive tasks. Focus on growing your business while AI handles the busy work.",
+					"Automate routine tasks like lead follow-ups, invoice tracking, and order updates. Free your team to focus on growth instead of grunt work.",
 			},
 			{
 				icon: "DollarSign",
-				title: "Cut Costs by 60%",
+				title: "Reduce Ops Cost by 40–60%",
 				description:
-					"Eliminate expensive manual processes. Our automations pay for themselves in weeks.",
+					"AI handles tasks that would otherwise need 1–2 full-time employees. Most of our clients see ROI in the first 4–6 weeks.",
 			},
 			{
 				icon: "Bot",
-				title: "Work 24/7 Non-Stop",
+				title: "Operate 24/7 — No Extra Hires",
 				description:
-					"Your business never sleeps. Capture leads, process orders, and serve customers around the clock.",
+					"Your AI agents never sleep. They auto-reply to leads, process vendor updates, send tracking info, and keep your systems running even on weekends.",
 			},
 			{
 				icon: "ShieldCheck",
-				title: "Zero Human Error",
+				title: "Eliminate Human Error",
 				description:
-					"Perfect execution every time. No more missed follow-ups or data entry mistakes.",
+					"No more typos, missed follow-ups, or “Oops, I forgot to send that.” AI ensures every step gets executed, exactly as planned—every single time.",
 			},
 		],
 	},
 
 	// Contact/CTA Section
 	cta: {
-		title: "Let's Automate Your First Workflow",
+		title: "Let’s Build Something Magical",
 		subtitle:
-			"Free audit included. We'll analyze your business and show you exactly what we can automate.",
+			"Tell us what’s slowing your business down. We’ll show you how our AI agents can take over the boring bits-fast.",
 		button: "Get in Touch",
-		disclaimer: "No commitments. No long contracts. Just results.",
+		disclaimer: "No pressure. Just clarity.",
 	},
 };

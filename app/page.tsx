@@ -243,6 +243,18 @@ export default function HelixLandingPage(): React.ReactElement {
 						box-shadow: 0 0 20px 6px rgba(139, 92, 246, 0.9);
 					}
 				}
+
+				@keyframes slowBounce {
+					0%, 100% {
+						transform: translateY(0);
+					}
+					50% {
+						transform: translateY(-10px);
+					}
+				}
+				.animate-slowBounce {
+					animation: slowBounce 8s ease-in-out infinite;
+				}
 			`}</style>
 
 			<Navbar />
@@ -370,10 +382,10 @@ export default function HelixLandingPage(): React.ReactElement {
 										}
 									)}
 								</div>
-								<h3 className='text-lg font-semibold mb-2 text-center'>
+								<h3 className='text-md font-semibold mb-2 text-center'>
 									{item.title}
 								</h3>
-								<p className='text-gray-400 text-sm text-center'>
+								<p className='text-gray-400 text-sm text-center tracking-wide'>
 									{item.description}
 								</p>
 							</div>
@@ -385,18 +397,25 @@ export default function HelixLandingPage(): React.ReactElement {
 			{/* Contact Section */}
 			<section
 				id='contact'
-				className='relative py-32 sm:py-40 md:py-42 bg-black text-white px-4 sm:px-6 md:px-8'>
-				<div className='max-w-4xl mx-auto text-center relative z-10'>
-					<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 sm:mb-12'>
+				className='relative py-32 sm:py-40 md:py-42 bg-black text-white px-4 sm:px-6 md:px-8 overflow-hidden'>
+				<div className='absolute inset-0 z-0'>
+					<div className='absolute -top-32 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/20 blur-[120px] rounded-full animate-pulse'></div>
+					<div className='absolute bottom-0 right-0 w-[300px] h-[300px] bg-indigo-400/20 blur-[100px] rounded-full animate-slowBounce'></div>
+				</div>
+
+				<div className='relative z-10 max-w-4xl mx-auto text-center space-y-6 px-4 sm:px-6'>
+					<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight'>
 						{websiteContent.cta.title}
 					</h2>
-					<p className='text-gray-400 max-w-4xl mx-auto mb-8 sm:mb-12'>
+					<p className='text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto'>
 						{websiteContent.cta.subtitle}
 					</p>
-					<button className='bg-purple-600 hover:bg-purple-500 text-white px-8 py-4 rounded-lg transition'>
-						{websiteContent.cta.button}
-					</button>
-					<p className='text-sm text-gray-500 mt-4'>
+					<div className='pt-6'>
+						<button className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 text-lg rounded-full font-semibold shadow-xl transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-600'>
+							{websiteContent.cta.button}
+						</button>
+					</div>
+					<p className='text-sm text-gray-500 pt-4'>
 						{websiteContent.cta.disclaimer}
 					</p>
 				</div>
